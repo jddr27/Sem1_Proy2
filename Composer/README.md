@@ -45,7 +45,7 @@
    $docker pull [Nombre_repositorio]/[nombre_cont]:[nombre_tag]
 ```
 
-## Crear docker-compose.yml:
+## Crear docker-compose.yml y creación de varios contenedores con este único archivo:
 
 **3. Se crea el archivo docker-compose.yml con:**
 ```
