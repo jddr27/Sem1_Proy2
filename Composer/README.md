@@ -56,54 +56,25 @@
 ```
 version: '3'
 services:
-
-  #nodejs
-  app:
-    image: jdgk27/proyecto1:api
-    container_name: app
-    restart: unless-stopped
-    tty: true
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
-    working_dir: /var/www
-    depends_on:
-      - db
-    networks:
-      - app-network
-
-  #Nginx Service
-  webserver:
-    image: jdgk27/proyecto1:nginxS2
-    container_name: webserver
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-    networks:
-      - app-network
-
-  #MySQL Service
   db:
-    image: jdgk27/proyecto1:bd2
-    container_name: db2
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "3306:3306"
+    build: ./BD
     environment:
-      MYSQL_DATABASE: daniel
-      MYSQL_ROOT_PASSWORD: daniel
-    networks:
-      - app-network
-
-#Docker Networks
-networks:
-  app-network:
-    driver: bridge
-
+      MYSQL_DATABASE: company
+      MYSQL_ROOT_PASSWORD: 123456789
+      DATABASE_HOST: db
+  web:
+    build: ./API
+    environment:
+      DATABASE_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: company
+      MYSQL_USER: daniel
+      MYSQL_PASSWORD: daniel
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+restart: on-failure
 ```
 **5. Guardamos y salimos con:**
 ```
