@@ -124,3 +124,8 @@ networks:
   $docker exec -it [id_contenedor] bash
 ```
 
+**9. Detener imagenes con:**
+```
+  $docker-compose down
+```
+
