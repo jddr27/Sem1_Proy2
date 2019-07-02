@@ -114,7 +114,7 @@ networks:
   $docker-compose up -d
 ```
 
-**7. Revisar si se levantan las imagenes con:**
+**7. Revisar que contenedores se han creado con:**
 ```
   $docker ps
 ```
@@ -124,7 +124,7 @@ networks:
   $docker exec -it [id_contenedor] bash
 ```
 
-**9. Detener imagenes con:**
+**9. Detener imagenes de los contenedores con:**
 ```
   $docker-compose down
 ```
