@@ -45,6 +45,8 @@
    $docker pull [Nombre_repositorio]/[nombre_cont]:[nombre_tag]
 ```
 
+## Crear docker-compose.yml:
+
 **3. Se crea el archivo docker-compose.yml con:**
 ```
   $nano docker-compose.yml
