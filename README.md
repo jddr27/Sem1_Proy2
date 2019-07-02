@@ -37,7 +37,7 @@ terraform --version
 ```
 terraform int
 ```
-**9. Luego **
+**9. Luego**
 
 ```
 terraform apply #Para correr nuestra insfraestructura
