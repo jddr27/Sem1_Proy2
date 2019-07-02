@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    build: ./BD
+    environment:
+      MYSQL_DATABASE: company
+      MYSQL_ROOT_PASSWORD: 123456789
+      DATABASE_HOST: db
+  web:
+    build: ./API
+    environment:
+      DATABASE_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: company
+      MYSQL_USER: daniel
+      MYSQL_PASSWORD: daniel
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    restart: on-failure
