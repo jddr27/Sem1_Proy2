@@ -1,9 +1,9 @@
   variable "aws_access_key" {
-  default = "AKIAU6CRM5EAXTAZGLXW"
+  default = [PASSWORD]
   }
   
   variable "aws_secret_key" {
-  default = "9QRCJ9AfU9sHGPPjzARwgy/auiRHbwsiOhzMyMNZ"
+  default =[PASSWORD]
   }
   
   variable "aws_region" {
@@ -23,7 +23,7 @@
   }
   resource "aws_key_pair" "instance-key" {
     key_name   = "MiPrimeraClaveA"
-    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIk1ru+mZ/zR7LkmpAcsiA0qRGYfH4lIpebi05F33dbC8pKfM+LYivnLLypPldwHu16mkEnT3F11HLSbgxnS365ZvFQYuFEenMvC8ErzVjJtnObvlYCJ9Avk4sNhnCu3OtUtqgAiW9KZqCZcsR3U4y3GesLlQ0X4cpOOO175/e5Gmh/plYN2Vg3Yr+Mjv7xtF3+G+Ik+81fJ2A4eSBvDjPforN9aCQDy4r+sMwCGmu5NQ5tS+zmppws2Gd5Z/ByQpQLPDVBadfyLQSLOEYoBsePn7Kq+XwAMzpqAqcgsUnGZYl31p6edGpR3unuUNlqLdR8HpLY7j1D0aj2zSoWTFF ubuntu@ip-172-31-24-94"
+    public_key = [PASSWORD]
   }
 
 
